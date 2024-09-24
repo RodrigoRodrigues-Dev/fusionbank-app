@@ -1,0 +1,71 @@
+@use '../variables';
+
+.header {
+    .container {
+        padding: 2em 15em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        color: variables.$color-primary;
+        font-size: 2em;
+        font-weight: bold; // Aumenta o destaque
+        letter-spacing: 0.05em; // Ajuste opcional para espaçamento
+    }
+    
+    &__nav {
+        &__center {
+            display: flex;
+            gap: 0.5em;
+
+            &__item {
+                font-size: 1.1em;
+                padding: 0.5em 1em;
+                border-radius: 0.2em;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                font-weight: 600;
+
+                span {
+                    margin-left: 0.5em;
+                }
+
+                &:hover {
+                    color: variables.$color-primary;
+                }
+            }
+        }
+    }
+
+    &__authMenu {
+        &__login {
+            background: none;
+            color: variables.$color-primary;
+
+            &:hover {
+                color: lighten(variables.$color-primary, 15%);
+            }
+        }
+
+        &__register {
+            background-color: variables.$color-primary;
+            color: #fff; 
+
+            &:hover {
+                background-color: darken(variables.$color-primary, 5%);
+            }
+        }
+
+        &__login, &__register {
+            font-size: 1.2em;
+            font-weight: 600;
+            padding: 0.6em 1.5em;
+            border-radius: 0.3em;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}

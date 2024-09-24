@@ -15,4 +15,5 @@ gulp.task('styles', function compileSass() {
 exports.default = gulp.parallel('styles');
 exports.watch = function() {
     gulp.watch('./src/scss/*.scss', { ignoreInitial: false }, gulp.parallel('styles'));
+    gulp.watch('./src/scss/partials/*.scss', { ignoreInitial:false }, gulp.parallel('styles'))
 };
