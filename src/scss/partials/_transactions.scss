@@ -1,0 +1,54 @@
+@use '../variables';
+
+.transactions {
+    position: relative;
+    padding: 7em 0em;
+    background-color: #F8EFEB;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__grid {
+        width: 50%;
+
+        &__title {
+            font-size: 3.5em;
+        }
+
+        &__description {
+            margin: 2em 0em;
+            display: block;
+        }
+
+        &__list {
+            gap: 2em;
+            display: flex;
+            flex-direction: column;
+
+            &__item {
+                display: flex;
+
+                &__icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: variables.$color-primary;
+                    padding: 0.5em;
+                    border-radius: 100%;
+                    width: 2em;
+                    height: 2em;
+                    color: #fff;
+                    margin-right: 1em;
+                }
+            }
+        }
+    }
+
+    &__services {
+        position: absolute;
+        right: 17%;
+        bottom: 0;
+    }
+}
