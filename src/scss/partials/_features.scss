@@ -1,0 +1,71 @@
+@use '../variables';
+
+.features {
+    position: relative;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__grid {
+        width: 50%;
+
+        &__title {
+            font-size: 4.5em;
+            margin-bottom: 1em;
+        }
+
+        &__cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+
+            &__card {
+                border: 2px solid rgb(145, 145, 145);
+                border-radius: 1em;
+                padding: 2em;
+
+                &__title {
+                    margin: 0.5em 0em;
+                }
+
+                &__icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2.5em;
+                    height: 2.5em;
+                    padding: 1em;
+                    border-radius: 100%;
+                    color: variables.$color-primary;
+                    background-color: #F8EFEB;
+                }
+            }
+        }
+    }
+
+    &__app {
+        span {
+            position: absolute;
+            font-size: 4em;
+            color: variables.$color-primary;
+            top: 5%;
+            right: 40%;
+            animation: fly 2s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes fly {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(20px) translateY(-10px) rotate(20deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
