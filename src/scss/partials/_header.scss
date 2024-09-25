@@ -1,8 +1,9 @@
 @use '../variables';
+@use '../mixins';
 
 .header {
     .container {
-        padding: 2em 15em;
+        margin: 2em 0em;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -42,30 +43,15 @@
 
     &__authMenu {
         &__login {
-            background: none;
-            color: variables.$color-primary;
-
-            &:hover {
-                color: lighten(variables.$color-primary, 15%);
-            }
+            @include mixins.btn-light();
         }
 
         &__register {
-            background-color: variables.$color-primary;
-            color: #fff; 
-
-            &:hover {
-                background-color: darken(variables.$color-primary, 5%);
-            }
+            @include mixins.btn-secondary();
         }
 
         &__login, &__register {
-            font-size: 1.2em;
-            font-weight: 600;
-            padding: 0.6em 1.5em;
-            border-radius: 0.3em;
-            border: none;
-            cursor: pointer;
+            @include mixins.btn-reset();
         }
     }
 }

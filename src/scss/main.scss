@@ -1,6 +1,7 @@
 @use 'reset';
 @use 'variables';
 @use '../scss/partials/header';
+@use '../scss/partials/hero';
 
 body {
     font-size: 16px;
@@ -9,5 +10,5 @@ body {
 .container {
     width: 100%;
     margin: auto;
-    padding: 0 20em;
+    padding: 0 23em;
 }

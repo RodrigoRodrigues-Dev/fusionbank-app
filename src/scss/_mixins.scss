@@ -1,0 +1,28 @@
+@use './variables';
+
+@mixin btn-reset() {
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0.6em 1.5em;
+    border-radius: 0.2em;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin btn-light() {
+    background: none;
+    color: variables.$color-primary;
+
+    &:hover {
+        color: lighten(variables.$color-primary, 15%);
+    }
+}
+
+@mixin btn-secondary() {
+    background-color: variables.$color-primary;
+    color: #fff; 
+
+    &:hover {
+        background-color: darken(variables.$color-primary, 5%);
+    }
+}

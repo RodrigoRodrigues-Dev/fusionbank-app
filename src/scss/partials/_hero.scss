@@ -1,0 +1,76 @@
+@use '../variables';
+@use '../mixins';
+
+.hero {
+    height: calc(100vh - 113px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__grid {
+        width: 50%;
+
+        &__title {
+            font-size: 4.5em;
+        }
+
+        &__descripition {
+            display: block;
+            padding: 1em 0em;
+            font-size: 1.5em;
+        }
+
+        &__list {
+            display: flex;
+            gap: 5em;
+            margin-bottom: 3em;
+
+            &__right, &__left {
+                &__item {
+                    font-size: 1em;
+                    display: flex;
+                    margin-bottom: 1em;
+
+                    span {
+                        margin-right: 0.5em;
+                        color: variables.$color-primary;
+                    }
+                }
+            }
+        }
+
+        &__btns {
+            display: flex;
+
+            &__register {
+                @include mixins.btn-secondary();
+            }
+
+            &__cards {
+                @include mixins.btn-light();
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: all 0.3s ease-in-out;
+
+                span {
+                    margin-left: 0.5em;
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                &:hover span {
+                    transform: translateX(0.3em);
+                }
+            }
+
+            &__cards, &__register {
+                @include mixins.btn-reset();
+            }
+        }
+    }
+}
