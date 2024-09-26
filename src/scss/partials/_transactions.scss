@@ -2,7 +2,7 @@
 
 .transactions {
     position: relative;
-    padding: 7em 0em;
+    padding: 7rem 0rem;
     background-color: #F8EFEB;
 
     .container {
@@ -14,16 +14,16 @@
         width: 50%;
 
         &__title {
-            font-size: 3.5em;
+            font-size: 3.5rem;
         }
 
         &__description {
-            margin: 2em 0em;
+            margin: 2rem 0rem;
             display: block;
         }
 
         &__list {
-            gap: 2em;
+            gap: 2rem;
             display: flex;
             flex-direction: column;
 
@@ -34,13 +34,13 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: variables.$color-primary;
-                    padding: 0.5em;
+                    width: 2rem;
+                    height: 2rem;
+                    padding: 0.5rem;
+                    margin-right: 1rem;
                     border-radius: 100%;
-                    width: 2em;
-                    height: 2em;
                     color: #fff;
-                    margin-right: 1em;
+                    background-color: variables.$color-primary;
                 }
             }
         }

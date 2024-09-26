@@ -16,28 +16,28 @@
         width: 50%;
 
         &__title {
-            font-size: 4.5em;
+            font-size: 4.5rem;
         }
 
         &__descripition {
             display: block;
-            padding: 1em 0em;
-            font-size: 1.5em;
+            padding: 1rem 0rem;
+            font-size: 1.5rem;
         }
 
         &__list {
             display: flex;
-            gap: 5em;
-            margin-bottom: 3em;
+            gap: 5rem;
+            margin-bottom: 3rem;
 
             &__right, &__left {
-                &__item {
-                    font-size: 1em;
+                &__itrem {
+                    font-size: 1rem;
                     display: flex;
-                    margin-bottom: 1em;
+                    margin-bottom: 1rem;
 
                     span {
-                        margin-right: 0.5em;
+                        margin-right: 0.5rem;
                         color: variables.$color-primary;
                     }
                 }
@@ -59,12 +59,12 @@
                 transition: all 0.3s ease-in-out;
 
                 span {
-                    margin-left: 0.5em;
+                    margin-left: 0.5rem;
                     transition: transform 0.3s ease-in-out;
                 }
 
                 &:hover span {
-                    transform: translateX(0.3em);
+                    transform: translateX(0.3rem);
                 }
             }
 

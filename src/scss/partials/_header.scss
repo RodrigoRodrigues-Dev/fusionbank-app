@@ -3,7 +3,7 @@
 
 .header {
     .container {
-        margin: 2em 0em;
+        margin: 2rem 0rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -11,27 +11,27 @@
 
     &__logo {
         color: variables.$color-primary;
-        font-size: 2em;
+        font-size: 2rem;
         font-weight: bold; // Aumenta o destaque
-        letter-spacing: 0.05em; // Ajuste opcional para espaçamento
+        letter-spacing: 0.05rem; // Ajuste opcional para espaçamento
     }
     
     &__nav {
         &__center {
             display: flex;
-            gap: 0.5em;
+            gap: 0.5rem;
 
             &__item {
-                font-size: 1.1em;
-                padding: 0.5em 1em;
-                border-radius: 0.2em;
+                font-size: 1.1rem;
+                padding: 0.5rem 1rem;
+                border-radius: 0.2rem;
                 display: flex;
                 align-items: center;
                 cursor: pointer;
                 font-weight: 600;
 
                 span {
-                    margin-left: 0.5em;
+                    margin-left: 0.5rem;
                 }
 
                 &:hover {

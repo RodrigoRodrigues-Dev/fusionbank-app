@@ -2,7 +2,7 @@
 
 .features {
     position: relative;
-    margin-bottom: 10em;
+    margin-bottom: 10rem;
 
     .container {
         display: flex;
@@ -14,31 +14,31 @@
         width: 50%;
 
         &__title {
-            font-size: 4.5em;
-            margin-bottom: 1em;
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
         }
 
         &__cards {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2em;
+            gap: 2rem;
 
             &__card {
                 border: 2px solid rgb(145, 145, 145);
-                border-radius: 1em;
-                padding: 2em;
+                border-radius: 1rem;
+                padding: 2rem;
 
                 &__title {
-                    margin: 0.5em 0em;
+                    margin: 0.5rem 0rem;
                 }
 
                 &__icon {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 2.5em;
-                    height: 2.5em;
-                    padding: 1em;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    padding: 1rem;
                     border-radius: 100%;
                     color: variables.$color-primary;
                     background-color: #F8EFEB;
@@ -50,7 +50,7 @@
     &__app {
         span {
             position: absolute;
-            font-size: 4em;
+            font-size: 4rem;
             color: variables.$color-primary;
             top: 5%;
             right: 40%;

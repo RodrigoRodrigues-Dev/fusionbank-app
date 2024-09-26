@@ -1,10 +1,10 @@
 @use './variables';
 
 @mixin btn-reset() {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: 600;
-    padding: 0.6em 1.5em;
-    border-radius: 0.2em;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.2rem;
     border: none;
     cursor: pointer;
 }
@@ -24,5 +24,15 @@
 
     &:hover {
         background-color: darken(variables.$color-primary, 5%);
+    }
+}
+
+@mixin btn-tertiary() {
+    border: 1px solid rgb(189, 188, 188);
+    background-color: transparent;
+    border-radius: 0.2rem;
+
+    &:hover {
+        background-color: darken(rgb(189, 188, 188), 1%);
     }
 }

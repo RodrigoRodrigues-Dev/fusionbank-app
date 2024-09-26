@@ -1,0 +1,53 @@
+@use '../mixins';
+
+.heroCards, .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroCards {
+    height: 100vh;
+
+    .container {
+        flex-direction: column;
+    }
+
+    &__grid {
+        text-align: center;
+
+        &__subTitle {
+            font-size: 1.5rem;
+        }
+
+        &__title {
+            font-size: 4rem;
+            margin: 0.5rem 0rem;
+        }
+
+        &__description {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__cards {
+        margin: 2rem 0rem;
+    }
+
+    &__btns {
+        display: flex;
+        gap: 1rem;
+
+        &__register, &__compare {
+            @include mixins.btn-reset();
+        }
+
+        &__register {
+            @include mixins.btn-secondary();
+        }
+
+        &__compare {
+            @include mixins.btn-tertiary();
+        }
+    }
+}
