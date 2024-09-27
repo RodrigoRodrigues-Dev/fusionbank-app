@@ -1,16 +1,17 @@
 @use '../mixins';
 
-.heroCards, .container {
+.heroCards {
+    height: auto;
+    margin: 10rem 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.heroCards {
-    height: 100vh;
 
     .container {
         flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__grid {
@@ -21,12 +22,13 @@
         }
 
         &__title {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin: 0.5rem 0rem;
         }
 
         &__description {
             font-size: 1.3rem;
+            margin: 1em 0em;
         }
     }
 

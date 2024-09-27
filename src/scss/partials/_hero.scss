@@ -2,7 +2,8 @@
 @use '../mixins';
 
 .hero {
-    height: calc(100vh - 113px);
+    height: auto;
+    margin: 14rem 0rem;
     display: flex;
     align-items: center;
     justify-content: center;
