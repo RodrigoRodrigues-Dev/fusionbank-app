@@ -1,0 +1,50 @@
+@use '../variables';
+
+.appIntroduction {
+
+    &__container {
+        display: flex;
+        position: relative;
+        margin: auto;
+        padding: 5rem 5rem;
+        background-color: #FF4500;
+        border-radius: 1rem;
+        color: #fff;
+    }
+
+    &__grid {
+        width: 50%;
+
+        &__title {
+            font-size: 4rem;
+        }
+
+        &__description {
+            margin: 2.3rem 0rem;
+        }
+        
+        &__list {
+            display: flex;
+            margin-bottom: 2rem;
+            gap: 2rem;
+
+            &__left__item, &__right__item {
+                display: flex;
+                align-items: center;
+                gap: 0.3rem;
+                margin: 1rem 0rem;
+
+                span {
+                    background-color: #f87343;;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+
+    &__app {
+        position: absolute;
+        right: 5%;
+        bottom: 0;
+    }
+}
