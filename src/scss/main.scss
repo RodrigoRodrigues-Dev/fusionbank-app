@@ -7,6 +7,7 @@
 @use '../scss/partials/heroCards';
 @use '../scss/partials/testimonials';
 @use '../scss/partials/appIntroduction';
+@use '../scss/partials/faq';
 
 html {
     font-size: 16px;
@@ -16,6 +17,12 @@ html {
     width: 100%;
     margin: auto;
     padding: 0 23rem;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: #d8d8d8;
 }
 
 ::-webkit-scrollbar {
