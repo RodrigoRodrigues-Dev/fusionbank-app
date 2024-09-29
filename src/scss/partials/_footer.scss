@@ -1,0 +1,52 @@
+@use '../variables';
+
+.footer {
+    padding: 0rem 0rem;
+
+    .container-flex {
+        padding: 5rem 23rem;
+    }
+
+    &__title {
+        color: variables.$color-primary;
+    }
+
+    &__content {
+        display: flex;
+        gap: 8rem;
+    }
+
+    &__list {
+        &__title {
+            margin-bottom: 1.5rem;
+        }
+
+        &__item {
+            color: rgb(110, 110, 110);
+            margin: 0.5rem 0rem;
+            cursor: pointer;
+
+            &:hover {
+                color: rgb(65, 64, 64);
+            }
+        }
+    }
+
+    &__credits {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 0rem;
+        color: rgb(77, 77, 77);
+
+        &__links {
+            display: flex;
+            gap: 1rem;
+
+            &__item:hover {
+                color: rgb(29, 29, 29);
+                cursor: pointer;
+            }
+        }
+    }
+}

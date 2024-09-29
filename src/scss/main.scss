@@ -1,5 +1,7 @@
 @use 'reset';
 @use 'variables';
+
+//partials
 @use '../scss/partials/header';
 @use '../scss/partials/hero';
 @use '../scss/partials/features';
@@ -8,9 +10,15 @@
 @use '../scss/partials/testimonials';
 @use '../scss/partials/appIntroduction';
 @use '../scss/partials/faq';
+@use '../scss/partials/footer';
 
 html {
     font-size: 16px;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-between;
 }
 
 .container {
@@ -20,9 +28,13 @@ html {
 }
 
 .line {
-    height: 1px;
+    height: 2px;
     width: 100%;
     background-color: #d8d8d8;
+}
+
+.emphasis {
+    color: variables.$color-primary;
 }
 
 ::-webkit-scrollbar {
