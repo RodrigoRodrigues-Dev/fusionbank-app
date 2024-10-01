@@ -1,3 +1,5 @@
+@use '../variables';
+
 .testimonials {
     padding: 3rem 0rem;
 
@@ -18,35 +20,31 @@
             font-size: 1.1rem;
 
             img {
-                background-color: #f7e7e1;
+                background-color: variables.$light-orange;
                 padding: 0.3rem;
                 border-radius: 100%;
+                width: 1.7rem;
             }
-        }
-
-        &__title {
-            font-size: 4rem;
         }
     }
 
     &__content {
         display: grid;
-        align-items: center;
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: auto; 
+        align-items: center;
         row-gap: 0.5rem;
         column-gap: 2rem;
         margin: 4rem 0rem;
 
         &__card {
             padding: 2rem;
-            border: 3px solid #afafaf;
+            border: 3px solid variables.$neutral-gray;
             border-radius: 1rem;
 
-            &__title {
-                font-size: 1.5rem;
+            .title--small {
                 margin: 0.5rem 0rem;
-            }
+            }        
 
             &__user {
                 margin: 1rem 0rem;
@@ -58,7 +56,7 @@
                 }
 
                 &__profession {
-                    color: #838383;
+                    color: variables.$medium-gray;
                 }
             }
         }

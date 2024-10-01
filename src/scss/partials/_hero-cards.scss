@@ -1,42 +1,29 @@
 @use '../mixins';
 
-.heroCards {
+.hero-cards {
     height: auto;
     margin: 10rem 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .container {
+    .title--medium {
+        margin: 1rem 0rem;
+    }
+
+    .container--flex {
         flex-direction: column;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     &__grid {
         text-align: center;
-
-        &__subTitle {
-            font-size: 1.5rem;
-        }
-
-        &__title {
-            font-size: 3.5rem;
-            margin: 0.5rem 0rem;
-        }
-
-        &__description {
-            font-size: 1.3rem;
-            margin: 1em 0em;
-        }
     }
 
-    &__cards {
+    &__image {
         margin: 2rem 0rem;
     }
 
-    &__btns {
+    &__actions {
         display: flex;
         gap: 1rem;
 

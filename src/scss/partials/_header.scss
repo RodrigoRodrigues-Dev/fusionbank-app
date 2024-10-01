@@ -4,20 +4,17 @@
 .header {
     .container {
         margin: 2rem 0rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
     &__logo {
         color: variables.$color-primary;
         font-size: 2rem;
-        font-weight: bold; // Aumenta o destaque
-        letter-spacing: 0.05rem; // Ajuste opcional para espaçamento
+        font-weight: bold;
+        letter-spacing: 0.05rem;
     }
     
     &__nav {
-        &__center {
+        &__list {
             display: flex;
             gap: 0.5rem;
 
@@ -41,7 +38,7 @@
         }
     }
 
-    &__authMenu {
+    &__auth-menu {
         &__login {
             @include mixins.btn-light();
         }

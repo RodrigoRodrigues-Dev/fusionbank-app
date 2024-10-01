@@ -1,23 +1,19 @@
 @use '../variables';
 
-.appIntroduction {
+.app-introduction {
 
     &__container {
         display: flex;
         position: relative;
         margin: auto;
         padding: 5rem 5rem;
-        background-color: #FF4500;
+        background-color: variables.$color-primary;
         border-radius: 1rem;
-        color: #fff;
+        color: variables.$white-color;
     }
 
     &__grid {
         width: 50%;
-
-        &__title {
-            font-size: 4rem;
-        }
 
         &__description {
             margin: 2.3rem 0rem;
@@ -35,9 +31,15 @@
                 margin: 1rem 0rem;
 
                 span {
-                    background-color: #f87343;;
+                    background-color: variables.$accent-orange;
                     border-radius: 100%;
                 }
+            }
+        }
+
+        &__download-app {
+            img {
+                cursor: pointer;
             }
         }
     }

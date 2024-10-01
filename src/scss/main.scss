@@ -6,9 +6,9 @@
 @use '../scss/partials/hero';
 @use '../scss/partials/features';
 @use '../scss/partials/transactions';
-@use '../scss/partials/heroCards';
+@use '../scss/partials/hero-cards';
 @use '../scss/partials/testimonials';
-@use '../scss/partials/appIntroduction';
+@use '../scss/partials/app-introduction';
 @use '../scss/partials/faq';
 @use '../scss/partials/footer';
 
@@ -16,9 +16,53 @@ html {
     font-size: 16px;
 }
 
-.container-flex {
-    display: flex;
-    justify-content: space-between;
+body {
+    color: variables.$dark-charcoal;
+}
+
+@mixin text($fontSize: 1.5rem) {
+    font-size: $fontSize;
+}
+
+@mixin title($fontSize: 3rem, $color: variables.$dark-charcoal) {
+    @include text($fontSize);
+    color: $color;
+}
+
+.text {
+    @include text();
+}
+
+.text--small {
+    @include text(1rem);
+}
+
+.text--medium {
+    @include text(2rem);
+}
+
+.title {
+    @include title();
+}
+
+.title--small {
+    @include title(1.5rem);
+}
+
+.title--small-orange {
+    @include title(1.5rem, variables.$color-primary);
+}
+
+.title--medium {
+    @include title(3.5rem);
+}
+
+.title--big {
+    @include title(4rem);
+}
+
+.title--big-light {
+    @include title(4rem, variables.$white-color);
 }
 
 .container {
@@ -27,10 +71,16 @@ html {
     padding: 0 23rem;
 }
 
+.container--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .line {
     height: 2px;
     width: 100%;
-    background-color: #d8d8d8;
+    background-color: variables.$light-gray;
 }
 
 .emphasis {

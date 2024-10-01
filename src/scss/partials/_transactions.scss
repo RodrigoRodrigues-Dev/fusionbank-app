@@ -3,12 +3,7 @@
 .transactions {
     position: relative;
     padding: 7rem 0rem;
-    background-color: #F8EFEB;
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-    }
+    background-color: variables.$light-orange;
 
     &__grid {
         width: 50%;
@@ -29,6 +24,8 @@
 
             &__item {
                 display: flex;
+                align-items: center;
+                font-weight: 700;
 
                 &__icon {
                     display: flex;

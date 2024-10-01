@@ -1,15 +1,22 @@
 @use './variables';
 
-@mixin btn-reset() {
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding: 0.6rem 1.5rem;
-    border-radius: 0.2rem;
-    border: none;
+@mixin btn-reset($border: none) {
+    border: $border;
     cursor: pointer;
 }
 
+@mixin btn($fontSize: 1.2rem, $padding: 0.6rem 1.5rem) {
+    @include btn-reset();
+
+    font-size: $fontSize;
+    padding: $padding;
+    font-weight: 600;
+    border-radius: 0.2rem;
+} 
+
 @mixin btn-light() {
+    @include btn();
+
     background: none;
     color: variables.$color-primary;
 
@@ -18,9 +25,29 @@
     }
 }
 
+@mixin btn-light-compare() {
+    @include btn-light();
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+
+    span {
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover span {
+        transform: translateX(0.5rem);
+    }
+}
+
 @mixin btn-secondary() {
+    @include btn();
+
     background-color: variables.$color-primary;
-    color: #fff; 
+    color: variables.$white-color;
 
     &:hover {
         background-color: darken(variables.$color-primary, 5%);
@@ -28,11 +55,13 @@
 }
 
 @mixin btn-tertiary() {
-    border: 1px solid rgb(189, 188, 188);
+    @include btn();
+    
+    border: 1px solid variables.$light-gray;
     background-color: transparent;
     border-radius: 0.2rem;
 
     &:hover {
-        background-color: darken(rgb(189, 188, 188), 1%);
+        background-color: darken(variables.$light-gray, 1%);
     }
 }

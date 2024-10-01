@@ -8,35 +8,29 @@
     align-items: center;
     justify-content: center;
 
-    .container {
-        display: flex;
-        justify-content: space-between;
+    .title--big {
+        margin-bottom: 1rem;
     }
 
     &__grid {
         width: 50%;
 
-        &__title {
-            font-size: 4.5rem;
-        }
-
         &__descripition {
             display: block;
-            padding: 1rem 0rem;
-            font-size: 1.5rem;
+            margin: 2rem 0rem;
         }
 
-        &__list {
+        &__features {
             display: flex;
             gap: 5rem;
-            margin-bottom: 3rem;
+            margin: 3rem 0rem;
 
-            &__right, &__left {
+            &__list {
                 &__item {
                     font-size: 1rem;
                     display: flex;
                     margin-bottom: 1rem;
-
+                    
                     span {
                         margin-right: 0.5rem;
                         color: variables.$color-primary;
@@ -45,7 +39,7 @@
             }
         }
 
-        &__btns {
+        &__actions {
             display: flex;
 
             &__register {
@@ -53,24 +47,7 @@
             }
 
             &__cards {
-                @include mixins.btn-light();
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                transition: all 0.3s ease-in-out;
-
-                span {
-                    margin-left: 0.5rem;
-                    transition: transform 0.3s ease-in-out;
-                }
-
-                &:hover span {
-                    transform: translateX(0.3rem);
-                }
-            }
-
-            &__cards, &__register {
-                @include mixins.btn-reset();
+                @include mixins.btn-light-compare();
             }
         }
     }
