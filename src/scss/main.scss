@@ -14,6 +14,10 @@
 
 html {
     font-size: 16px;
+
+    @media (max-width: 850px) {
+        font-size: 12px;
+    }
 }
 
 body {
@@ -43,6 +47,10 @@ body {
 
 .title {
     @include title();
+
+    @media (max-width: 760px) {
+        @include title(2rem);
+    }
 }
 
 .title--small {
@@ -55,26 +63,70 @@ body {
 
 .title--medium {
     @include title(3.5rem);
+
+    @media (max-width: 1360px) {
+        @include title(2.5rem);
+    }
+
+    @media (max-width: 850px) {
+        @include title(2rem);
+    }
 }
 
 .title--big {
     @include title(4rem);
+
+    @media (max-width: 1360px) {
+        @include title(3.5rem);
+    }
+
+    @media (max-width: 850px) {
+        @include title(2rem);
+    }
 }
 
 .title--big-light {
     @include title(4rem, variables.$white-color);
+
+    @media (max-width: 1200px) {
+        @include title(2rem, variables.$white-color);
+    }
+
+    @media (max-width: 850px) {
+        @include title(2rem, variables.$white-color);
+    }
 }
 
 .container {
     width: 100%;
     margin: auto;
     padding: 0 23rem;
+
+    @media (max-width: 1780px) {
+        padding: 0 15rem;
+    }
+
+    @media (max-width: 1540px) {
+        padding: 0 10rem;
+    }
+
+    @media (max-width: 1350px) {
+        padding: 0 5rem;
+    }
+
+    @media (max-width: 650px) {
+        padding: 0 2rem;
+    }
 }
 
 .container--flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1100px) {
+        flex-direction: column;
+    }
 }
 
 .line {

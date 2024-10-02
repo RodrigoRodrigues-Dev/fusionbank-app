@@ -11,10 +11,18 @@
     &__grid {
         width: 50%;
 
+        @media (max-width: 1100px) {
+            width: 100%;
+        }
+
         &__cards {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
+
+            @media (max-width: 1100px) {
+                grid-template-columns: 1fr;
+            }
 
             &__card {
                 border: 2px solid variables.$neutral-gray;
@@ -41,6 +49,21 @@
     }
 
     &__app {
+        @media (max-width: 1100px) {
+            margin-top: 5rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+    
+            img {
+                width: 300px;
+            }
+            
+            span {
+                display: none;
+            }
+        }
+
         span {
             position: absolute;
             font-size: 4rem;

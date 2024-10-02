@@ -17,6 +17,15 @@
 @mixin btn-light() {
     @include btn();
 
+    @media (max-width: 850px) {
+        @include btn(1rem, 0.5rem 1rem);
+    }
+
+    @media (max-width: 650px) {
+        @include btn(0.8rem, 0.4rem 1rem);
+    }
+
+
     background: none;
     color: variables.$color-primary;
 
@@ -36,6 +45,10 @@
     span {
         margin-left: 0.5rem;
         transition: transform 0.3s ease-in-out;
+
+        @media (max-width: 650px) {
+            font-size: 20px;
+        }
     }
 
     &:hover span {
@@ -45,6 +58,14 @@
 
 @mixin btn-secondary() {
     @include btn();
+
+    @media (max-width: 850px) {
+        @include btn(1rem);
+    }
+
+    @media (max-width: 650px) {
+        @include btn(0.8rem);
+    }
 
     background-color: variables.$color-primary;
     color: variables.$white-color;
@@ -56,6 +77,14 @@
 
 @mixin btn-tertiary() {
     @include btn();
+
+    @media (max-width: 850px) {
+        @include btn(1rem);
+    }
+
+    @media (max-width: 650px) {
+        @include btn(0.8rem);
+    }
     
     border: 1px solid variables.$light-gray;
     background-color: transparent;

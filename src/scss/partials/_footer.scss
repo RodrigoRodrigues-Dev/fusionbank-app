@@ -3,8 +3,37 @@
 .footer {
     padding: 0rem 0rem;
 
+    .title--small-orange {
+        @media (max-width: 1780px) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .container {
+        @media (max-width: 850px) {
+            padding: 0;
+        }
+    }
+
     .container--flex {
         padding: 5rem 23rem;
+
+        @media (max-width: 1780px) {
+            flex-direction: column;
+            padding: 5rem 15rem;
+                
+            @media (max-width: 1540px) {
+                padding: 5rem 11rem;
+            }
+        
+            @media (max-width: 1220px) {
+                padding: 5rem 1rem;
+            }
+
+            @media (max-width: 1100px) {
+                padding: 5rem 0;
+            }
+        }
     }
 
     &__title {
@@ -14,6 +43,16 @@
     &__content {
         display: flex;
         gap: 8rem;
+
+        @media (max-width: 630px) {
+            gap: 3rem;
+        }
+
+        @media (max-width: 460px) {
+            flex-direction: column;
+            align-self: start;
+            margin-left: 10%;
+        }
     }
 
     &__list {
@@ -39,13 +78,30 @@
         padding: 1.5rem 0rem;
         color: variables.$medium-charcoal;
 
+        @media (max-width: 850px) {
+            flex-direction: column;
+            margin-bottom: 1rem;
+            align-items: start;
+            margin-left: 10%;
+
+            &__platform {
+                margin-bottom: 1rem;
+            }
+        }
+
         &__links {
             display: flex;
             gap: 1rem;
 
+            @media (max-width: 850px) {
+                gap: 1rem;
+                flex-direction: column;
+            }
+
             &__item:hover {
                 color: variables.$dark-charcoal;
                 cursor: pointer;
+
             }
         }
     }

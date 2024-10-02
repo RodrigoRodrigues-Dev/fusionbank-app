@@ -18,6 +18,12 @@
             margin: 3rem 0rem;
             gap: 1.5rem;
 
+            &__btn {
+                @include mixins.btn-light-compare();
+                width: 100px;
+                padding: 0;
+            }
+
             &__tel, &__email {
                 display: flex;
                 align-items: center;
@@ -49,12 +55,6 @@
                         font-weight: 600;
                     }
                 }
-            }
-            
-            &__btn {
-                @include mixins.btn-light-compare();
-                padding: 0;
-                width: 100px;
             }
         }
     }
@@ -98,6 +98,14 @@
                     max-height: 500px;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .faq {
+        &__grid, &__questions {
+            width: 100%;
         }
     }
 }

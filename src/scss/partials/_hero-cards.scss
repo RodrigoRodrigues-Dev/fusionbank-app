@@ -7,12 +7,17 @@
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 850px) {
+        margin: 5rem 0rem;
+    }
+
     .title--medium {
         margin: 1rem 0rem;
     }
 
     .container--flex {
         flex-direction: column;
+        align-items: center;
     }
 
     &__grid {
@@ -21,6 +26,24 @@
 
     &__image {
         margin: 2rem 0rem;
+
+        @media (max-width: 1100px) {
+            img {
+                width: 350px;
+            }
+        }
+
+        @media (max-width: 850px) {
+            img {
+                width: 250px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            img {
+                width: 200px;
+            }
+        }
     }
 
     &__actions {
